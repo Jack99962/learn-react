@@ -9,6 +9,7 @@ import {
 } from '@ant-design/icons';
 import { Button, Layout, Menu, theme } from 'antd';
 import LayoutMenu from '../components/Layout/LayoutMenu';
+import LayoutHeader from '../components/Layout/LayoutHeader';
 const { Header, Sider, Content } = Layout;
 
 export default function main() {
@@ -21,18 +22,7 @@ export default function main() {
     <Layout className="main-container">
       <LayoutMenu  />
       <Layout>
-        <Header style={{ padding: 0, background: colorBgContainer }}>
-          <Button
-            type="text"
-            icon={collapsed ? <MenuUnfoldOutlined /> : <MenuFoldOutlined />}
-            onClick={() => setCollapsed(!collapsed)}
-            style={{
-              fontSize: '16px',
-              width: 64,
-              height: 64,
-            }}
-          />
-        </Header>
+        <LayoutHeader/>
         <Content
           style={{
             margin: '24px 16px',
